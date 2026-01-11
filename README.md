@@ -1,68 +1,68 @@
-# CARLA DQN - Deep Reinforcement Learning for Autonomous Driving
+\# CARLA DQN — Deep Reinforcement Learning for Autonomous Driving
 
 
 
-This repository implements a Deep Q-Network (DQN) agent trained in the CARLA simulator for autonomous driving in a racing-style environment.
+This repository implements a \*\*Deep Q-Network (DQN)\*\* agent trained in the \*\*CARLA simulator\*\* for autonomous driving in a racing-style environment.
 
 
 
-The goal of this project is not to introduce new algorithms, but to reproduce and apply the system-level techniques that made deep reinforcement learning stable in practice, as introduced in the Atari DQN paper. The focus is on engineering correctness, training stability, and clean code structure.
+The goal of this project is not to introduce new algorithms, but to reproduce and apply the \*\*system-level techniques\*\* that made deep reinforcement learning stable in practice, as introduced in the \*Atari DQN\* paper. The focus is on \*\*engineering correctness, training stability, and clean code structure\*\*.
 
 
 
-Project Overview
+---
 
 
 
-The agent learns a discrete driving policy directly from observations by interacting with a custom CARLA environment. Key reinforcement learning components such as experience replay, target networks, and epsilon-greedy exploration scheduling are implemented from scratch.
+\## Project Overview
 
 
 
-This repository serves as a baseline DQN implementation that can be extended to more advanced methods such as Double DQN, behavior-cloning initialization, or alternative reward and action space designs.
+The agent learns a discrete driving policy directly from observations by interacting with a custom CARLA environment. Key reinforcement learning components such as \*\*experience replay\*\*, \*\*target networks\*\*, and \*\*epsilon-greedy exploration scheduling\*\* are implemented from scratch.
 
 
 
-Implemented Features
+This repository serves as a \*\*baseline DQN implementation\*\* that can be extended to more advanced methods such as \*\*Double DQN\*\*, behavior-cloning initialization, or alternative reward and action space designs.
 
 
 
-Custom CARLA environment wrapper
+---
 
 
 
-Discrete action space for vehicle control
+\## Implemented Features
 
 
 
-Reward shaping for lane following, stability, and progress
+\- Custom CARLA environment wrapper
+
+\- Discrete action space for vehicle control
+
+\- Reward shaping for lane following, stability, and progress
+
+\- Deep Q-Network (DQN) implemented in PyTorch
+
+\- Experience replay buffer
+
+\- Fixed target network for stable learning
+
+\- Epsilon-greedy exploration with scheduling
+
+\- Training and evaluation scripts
+
+\- Saved training curves and example checkpoint
 
 
 
-Deep Q-Network (DQN) with PyTorch
+---
 
 
 
-Experience replay buffer
+\## Repository Structure
 
 
 
-Fixed target network for stable learning
-
-
-
-Epsilon-greedy exploration with scheduling
-
-
-
-Training and evaluation scripts
-
-
-
-Saved training curves and example checkpoint
-
-
-
-Repository Structure
+```text
 
 CARLA\_DQN/
 
@@ -74,7 +74,7 @@ CARLA\_DQN/
 
 ├── checkpoints/        # Saved model checkpoints
 
-├── docs/               # (Reserved for future documentation)
+├── docs/               # Reserved for future documentation
 
 ├── train.py            # Training entry point
 
@@ -86,7 +86,11 @@ CARLA\_DQN/
 
 
 
-Requirements
+---
+
+
+
+\## Requirements
 
 
 
@@ -94,9 +98,9 @@ Basic Python dependencies are listed in requirements.txt:
 
 
 
+```bash
+
 pip install -r requirements.txt
-
-
 
 
 
@@ -106,13 +110,19 @@ Ensure the CARLA Python API is available on your PYTHONPATH before running train
 
 
 
-Training
+---
+
+
+
+\## Training
 
 
 
 To train the DQN agent:
 
 
+
+```bash
 
 python train.py
 
@@ -140,13 +150,19 @@ Training reward and loss curves are saved to the plots/ directory.
 
 
 
-Evaluation
+---
+
+
+
+\## Evaluation
 
 
 
 To evaluate a trained agent:
 
 
+
+```bash
 
 python evaluate.py
 
@@ -158,7 +174,11 @@ An example pretrained checkpoint is provided in the checkpoints/ directory for r
 
 
 
-Design Philosophy
+---
+
+
+
+\## Design Philosophy
 
 
 
@@ -166,15 +186,15 @@ This project emphasizes:
 
 
 
-Correct reinforcement learning system design
+* Correct reinforcement learning system design
 
 
 
-Clear separation between environment, agent, and training logic
+* Clear separation between environment, agent, and training logic
 
 
 
-Reproducibility and readability over novelty
+* Reproducibility and readability over novelty
 
 
 
@@ -182,7 +202,11 @@ It is intended as a solid foundation for further exploration of reinforcement le
 
 
 
-Future Work
+--- 
+
+
+
+\## Future Work
 
 
 
@@ -190,27 +214,29 @@ Planned extensions include:
 
 
 
-Double DQN to reduce overestimation bias
+* Double DQN to reduce overestimation bias
 
 
 
-Alternative reward formulations
+* Alternative reward formulations
 
 
 
-Action space redesign and ablation studies
+* Action space redesign and ablation studies
 
 
 
-Behavior cloning as an initialization baseline
+* Behavior cloning as an initialization baseline
 
 
 
-More complex driving scenarios
+* More complex driving scenarios
+
+---
 
 
 
-Author
+\## Author
 
 
 
@@ -219,4 +245,6 @@ Stan Lee
 M.S. Robotics \& Autonomous Systems
 
 Boston University
+
+
 
